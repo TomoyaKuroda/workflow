@@ -5,8 +5,8 @@ RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([^\.]+)$ $1.php [NC,L]
 
-# play video files in Safari
-SetEnvIfNoCase Request_URI . (?:mp4|mov|m4v)$ no-gzip dont-vary
+# play video files in Safari https://clickshepherd.com/solved-elegant-themes-divi-and-cloudflare-mp4-media-error-formats-not-supported-or-sources-not-found
+SetEnvIfNoCase Request_URI .(?:mp4)$ no-gzip dont-vary
 
 # redirect www to non-www
 RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
